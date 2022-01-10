@@ -1,0 +1,257 @@
+//Movil
+.mainAsideServ{display: none;}
+
+#serv{
+    background-image: url(./img/fondoServ.jpg);
+    background-position-x: 40%;
+}
+
+.delete,
+.delete:focus,
+.delete:visited,
+.delete:active,
+.delete:focus-visible{
+    outline: none !important;
+    border: none !important;
+}
+
+.servSec1{
+    
+    // height: 100%;
+
+    &__tituloPPal{
+        font-size: 2.5rem;
+        padding-top: .5rem;
+        margin: 0 1rem;
+        color: rgba($color: $color-blanco, $alpha: 0.8);
+        font-weight: 800;
+        text-shadow: 0px 0px 18.9113px $color-neon, 0px 0px 73.2115px rgba(49, 218, 255, 0.5);
+        
+    }
+
+    &__parrafo{
+        p{
+            margin: 1rem;
+            color: $color-blanco;
+        }
+    }
+
+    &__grillas{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(5, 1fr);
+
+        .boxGrillas{
+            border-radius: .5rem;
+            margin: 1rem;
+            padding: 1rem;
+            background-color: $color-blanco;
+            overflow: hidden;
+            position: relative;
+
+            p {
+                margin-bottom: 2rem;
+            }
+
+            &__verMas{
+                position: absolute;
+                width: 100%;
+                top: 73%;
+                left: 0;
+                padding: 1rem 0;
+                border: none;
+                text-align: center;
+                color: $color-blanco;
+                background-color: $color-neon-2;
+                font-weight: 800;
+                
+                
+                
+            }
+        }
+    }
+}
+
+
+//Desktop
+.deskContent,
+.inicioDeskServ__col2{
+    display: none;
+}
+
+.mainAsideServ {
+    
+
+    &__logo {
+        @include flex(column, end, center);
+        svg{
+            width: 60%;
+            max-height: 15rem;
+            margin-top: 2rem;
+            
+        }    
+    }
+
+    &__nav{
+        ul {
+            list-style: none;
+            @include flex(column, center);
+
+            li{
+                text-align: start;
+                font-size: 1.2rem;
+                color: white;
+                padding: 1rem;
+                font-weight: 200;
+
+                a{
+                    margin-left: 16%;
+                }
+
+                &:hover{
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &__socials{
+        @include flex(row, center, end);
+        margin-bottom: 2.5rem;
+
+        svg {
+            margin: .5rem;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    #serv {
+        background-image: url(./img/fondoServ.jpg);
+        background-size: cover;
+        overflow: auto;
+        max-height: 100vh;
+    }
+    .servSec1{ display: none;}
+
+    .navbarServ{display: none;}
+
+    .deskContent {
+        display: block;
+        height: 100%;
+        margin: 2rem 6rem;
+
+        &__tituloPPal{
+            font-size: 2.5rem;
+            padding-top: .5rem;
+            margin: 0 1rem;
+            color: rgba($color: $color-blanco, $alpha: 0.8);
+            font-weight: 800;
+            text-shadow: 0px 0px 18.9113px $color-neon, 0px 0px 73.2115px rgba(49, 218, 255, 0.5);
+            
+        }
+    
+        &__parrafo{
+            p{
+                font-size: 1.5rem;
+                margin: 1rem 0;
+                margin-left: 1rem;
+                color: $color-blanco;
+            }
+        }
+    
+        &__grillas{
+            display: grid;
+            // height: max-content;
+            grid-template-columns: 45% 45%;
+            grid-template-rows: repeat(5, 22%);
+    
+            .boxGrillas{
+                border-radius: .5rem;
+                margin: 1rem;
+                margin-left: 1rem;
+                background-color: $color-blanco;
+                width: 95%;
+                // height: 70%;
+
+                
+                @include flex (row, none none);
+    
+                p {
+                    margin: 1rem;
+                    flex-grow: 2;
+                }
+    
+                &__verMas{
+                    cursor: pointer;
+                    // padding: 0 4rem;
+                    font-size: .8rem;
+                    // flex-grow: 5;
+                    width: 40%;
+                    margin: .8rem;
+                    border: none;
+                    text-align: center;
+                    color: $color-blanco;
+                    background-color: $color-neon-2;
+                    font-weight: 800;
+                    
+                    
+                    
+                }
+            }
+        }
+    }
+
+    .mainAsideServ {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40% 40% 20%;
+        background: rgba(196, 196, 196, 0.01);
+        /* VIDRIO NEON */
+
+        box-shadow: inset 0px 19.8066px 28.4403px -18.283px rgba(255, 255, 255, 0.5), inset 0px 3.55503px 5.58648px -2.03145px #FFFFFF, inset 0px -41.6447px 34.5346px -32.5032px rgba(96, 68, 145, 0.3), inset 0px 49.7704px 50.7862px -24.3774px rgba(202, 172, 255, 0.3), inset 0px 2.03145px 9.14151px rgba(154, 146, 210, 0.3), inset 0px 0.507862px 20.3145px rgba(227, 222, 255, 0.2);
+        backdrop-filter: blur(50.7862px);
+        /* Note: backdrop-filter has minimal browser support */
+        height: 105%;
+        z-index: 1;    
+    }
+
+
+    .inicioDeskServ{
+        &__col2{
+            display: block;
+            // flex: 8 !important;
+            // width: none !important;
+            // max-height: 100vh;
+            // margin: 0 2rem;
+
+        }
+    }
+}
+
+@media (max-height: 760px) {
+    .deskContent {
+        margin: 0 6rem;
+        &__parrafo{
+            
+            p{
+                margin: .5rem 1rem;
+                font-size: .8rem;
+            }
+        }
+
+        &__grillas{
+            grid-template-columns: 45% 45%;
+            grid-template-rows: repeat(5, 20%);
+            .boxGrillas{
+                margin: .8rem;
+                height: 85%;
+
+                p{
+                    margin: .6rem;
+                }
+            }
+        }
+    }
+}

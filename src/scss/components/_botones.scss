@@ -1,0 +1,34 @@
+.btn {
+    padding: 1rem 4rem;
+    border-radius: 1rem;
+    color: $color-blanco;
+    border: $color-blanco 1px solid;
+    font-weight: bold;
+
+    &--transparent {
+        background-color: transparent;
+
+        
+    }
+
+    &--blog{
+        width: 90%;
+        background: linear-gradient(0deg, rgba(49, 218, 255, 0.7), rgba(49, 218, 255, 0.7)), #2F1893;
+        border: none; 
+        border-radius: 16px;
+        padding: 1.2rem 4rem;
+        font-size: 1.5rem;
+
+        
+        
+    }
+
+
+
+    &:hover{
+        cursor: pointer;
+        color: #1A133F;
+        background-color: $color-blanco;
+    }
+    
+}

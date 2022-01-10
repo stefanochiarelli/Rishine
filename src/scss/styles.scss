@@ -1,0 +1,30 @@
+
+
+//Bulma Imports
+@import "../../node_modules/bulma/sass/utilities/all";
+@import "../../node_modules/bulma/sass/grid/columns.sass";
+@import "../../node_modules/bulma/sass/components/navbar.sass";
+@import "../../node_modules/bulma/sass/components/modal.sass";
+
+
+//Imports del proyecto
+@import "../scss/base/base";
+@import "../scss/base/utilities";
+@import "../scss/abstracts/mixin";
+@import "../scss/abstracts/variables";
+
+//components
+@import "../scss/components/modal";
+@import "../scss/components/botones";
+@import "../scss/components/cards";
+@import "../scss/components/tituloGlow";
+
+
+
+//páginas
+@import "../scss/pages/home.scss";
+@import "../scss/pages/servicios";
+@import "../scss/pages/blog";
+@import "../scss/pages/contacto";
+
+

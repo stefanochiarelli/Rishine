@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Assistant', sans-serif;
+}
+
+a{
+    text-decoration: none !important;
+    color: white;
+    
+}
+
+.columns {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+
+.column{
+    padding: 0;
+}
+
+.navActiveInicio{
+    background-color: rgba($color: #00FFB2, $alpha: 0.58);
+    
+    
+}
+
+.navActiveserv{
+    background-color: rgba($color: #FF7A00, $alpha: 0.76);
+    
+    
+}
+
+.navActiveblog{
+    background-color: rgba(49, 243, 255, 0.62);
+}
+
+.navActivectcto{
+    background-color: rgba(0, 0, 0, 0.62);
+}

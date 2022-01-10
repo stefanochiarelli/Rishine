@@ -1,0 +1,185 @@
+//Movil
+#contact {
+    background-image: url(./img/fondoServ.jpg);
+    background-size: cover;
+    background-position-x: 30%;
+
+    background-repeat: no-repeat;
+}
+
+
+
+.contactCont{
+    h1{
+        font-size: 2.5rem;
+    }
+
+    &__aside{
+        display: none;
+    }
+}
+
+.contactForm {
+    margin: 2rem;
+    input {
+        display: block;
+        width: 100%;
+        margin-bottom: .8rem;
+        padding: .7rem;
+        font-size: 1.25rem;
+    }
+
+    textarea {
+        width: 100%;
+        font-size: 1.25rem;
+        padding-left: .7rem;
+        padding-top: .7rem;
+    }
+
+    button{
+        width: 100%;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        margin-right: 2rem;
+        border: solid $color-blanco 2px;
+        border-radius: 1.5rem;
+        padding: 1rem;
+    }
+}
+
+.contactMap{
+    padding: 1rem;
+    background-color: rgba($color-blanco, 0.92);
+    margin: 1rem;
+    border-radius: .5rem;
+
+    &__wrapper{
+        position: relative;
+        padding: 1rem;
+        border-radius: .5rem;
+        height: 40vh;
+    }
+
+    &__texto{
+        text-align: center;
+
+        h3{
+            margin: 1rem 0;
+            font-style: normal;
+            font-weight: normal;
+        }
+    }
+    
+
+
+    &__iFrameWrapper{
+        
+        iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 1.5rem;
+            padding: 1rem;
+            
+        }
+    }
+}
+
+
+
+
+//Fin Movil
+
+
+//Desktop
+
+.titleBlogDesk{
+    display: none;
+    font-size: 5rem !important;
+    margin: 3rem 0;
+    margin-left: 6rem !important;
+}
+
+.ctctoDesk{
+    display: none;
+
+    &__sumbit{
+        display: none;
+        
+    }
+
+
+}
+
+@media (min-width: 968px) {
+
+    
+
+    #contact {
+        overflow: auto;
+        background-image: url(./img/CONTACTO.jpg);
+        background-size: cover;    
+        background-repeat: repeat;
+    }
+
+    .ctctoDesk{
+        display: block;
+
+        &__sumbit{
+            max-width: 100%;
+            display: block;
+            margin: 2rem 30rem;
+            
+        }
+    
+    }
+    
+    .navbarCtcto{
+        display: none;
+    }
+
+    .btnSumbit{
+        display: none;
+    }
+    
+    .contactMap{
+        display: none;
+    }
+
+    .formWrapper{
+        display: none;
+    }
+
+
+    .titleBlogDesk{
+        display: block;
+        margin-left: 2rem;
+    }
+
+    .contactCont{
+        .titleBlogMovil{
+            display: none;
+        }
+
+        &__aside{
+            display: block;
+        }
+    }
+
+    // .contactMap {
+    //     padding-right: 1rem;
+    //     &__wrapper{
+    //         margin-right: 2rem;
+    //     }
+    // }
+
+    .contactDesk {
+        &__map{
+            margin-top: 1rem;
+            padding: 0 .5rem;
+            background-color: rgba($color-blanco, 0.8);
+            @include flex(column, center, none);
+            border-radius: .5rem;
+        }
+    }
+}

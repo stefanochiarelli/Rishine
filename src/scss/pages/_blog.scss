@@ -1,0 +1,91 @@
+// Móvil
+#blog{
+    overflow: auto;
+    background-image: url(./img/fondoServ.jpg);
+    
+    background-size: 500% 25%;
+    background-position: 30% 0%;
+}
+
+.dropButtons{
+
+    h1 {
+        font-size: 2.5rem;
+        padding-top: .5rem;
+        margin: 1rem;
+        color: rgba($color: $color-blanco, $alpha: 0.8);
+        font-weight: 800;
+        text-shadow: 0px 0px 18.9113px $color-neon, 0px 0px 73.2115px rgba(49, 218, 255, 0.5);
+    }
+
+    &__wrapper{
+        @include flex(column, none, none) ;
+        &:not(:last-child){
+            margin-bottom: 1rem ;
+        }
+        .buttons{
+            background-color: rgba($color: #31DAFF, $alpha: 0.7);
+            padding: 1rem;
+            color: $color-blanco;
+            font-size: 1.87rem;
+            font-weight: bold;
+            border: none;
+            &:not(:last-child){
+                margin-bottom: .6rem ;
+            }
+        }
+    }
+}
+
+//Desktop
+
+.mainAsideBlog{
+    height: 100% ;
+    width: 16%;
+    position: fixed;
+}
+
+.contentDesk {
+    display: none;
+    margin: 0 2rem;
+    // &__h1{
+    //     font-size: 4rem;
+    //     padding-top: .5rem;
+    //     margin: 1rem;
+    //     color: rgba($color: $color-blanco, $alpha: 0.8);
+    //     font-weight: 800;
+    //     text-shadow: 0px 0px 18.9113px $color-neon, 0px 0px 73.2115px rgba(49, 218, 255, 0.5);
+    // }
+}
+
+@media (min-width: 768px) {
+    .contentDesk{
+        display: block;
+    }
+
+    .blogDesk{
+        height: 100vh;
+
+        .blogDeskCols{
+            height: 100vh;
+        }
+    }
+
+    #blog{
+        background-image: url(./img/fondoBlog.jpg);
+        background-size: cover;
+        // background-repeat: no-repeat;
+    }
+
+    .navbarBlog{display: none;}
+
+    .dropButtons {
+        display: none;
+    }
+}
+
+@media (min-width: 1500px){
+    .contentDesk{
+        margin: 0 10rem;
+    }
+}

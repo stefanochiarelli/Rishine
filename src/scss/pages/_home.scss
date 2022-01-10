@@ -1,0 +1,314 @@
+//Mobil
+
+#bodyIndex {
+    background-image: url(./img/fondoServ.jpg);
+    background-position-x: 65%;
+
+}
+
+.navbar {
+
+    &-brand {
+        background-color: rgba(#FFFFFF
+        , 0.8);
+    }
+    &__hamb {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 50%);
+    }
+}
+
+.inicioNavMobil{
+    
+    position: relative;
+    height: 126vh;
+    
+    
+
+    &__dragDiv{
+        background-color: rgba(0, 0, 0, 0.226);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 20px );
+        -webkit-backdrop-filter: blur( 2.5px );
+        border-radius: 2rem;
+        border: 3px solid rgba(255, 255, 255, 0.637);
+        height: 32rem;
+        width: 100%;
+        position: absolute;
+        top: 35rem;
+        left: 0;
+
+        .tituloMovRishine {
+            
+            margin-top: 2rem;
+            font-size: 1.25rem;
+            color: $color-blanco;
+            text-align: center;
+            position: relative;
+
+            &::before{
+                content: "";
+                position: absolute;
+                background-color: $color-blanco;
+                width: 50%;
+                height: .25rem;
+                border-radius: 2px;
+                left: 50%;
+                top: -1rem;
+                transform: translateX(-50%);
+
+            }
+
+            span {
+                font-weight: 300;
+            }
+        }
+        
+        .botonesConsultasMov {
+            @include flex(column, center, center);
+            
+
+            h3 {
+                margin-top: 2rem;
+                font-size: 1.25rem;
+                color: $color-blanco;
+                text-align: center;
+            }
+
+            &__boton1{
+                padding: 1rem 4rem;
+                margin: 3rem 0;
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: $color-blanco;
+                border: 2px $color-blanco solid;
+                border-radius: 1.5rem;
+                background-color: transparent;
+
+            }
+
+            &__boton2{
+                @extend .botonesConsultasMov__boton1;
+                margin: .6rem 0;
+                padding: 1rem 5.2rem;
+            }
+        }
+    }
+
+    &__logo {
+        svg{
+            width: 85%;
+            
+            display: block;
+            margin: 0 auto;
+            margin-top: 3rem;
+        }
+    }
+
+    
+}
+
+@media (min-height: 641px){
+    .inicioNavMobil {
+        overflow-y: hidden;
+    }
+
+    .inicioNavMobil__dragDiv{
+        height: 80%;
+    }
+
+}
+//Fin Mobil
+
+
+//Inicio desktop
+.inicioDesk,
+.mainAside{
+    display: none;
+    
+}
+
+.mainAside {
+    
+
+    &__logo {
+        @include flex(column, end, center);
+        svg{
+            width: 60%;
+            max-height: 15rem;
+            margin-top: 2rem;
+            
+        }    
+    }
+
+    &__nav{
+        ul {
+            list-style: none;
+            @include flex(column, center);
+
+            li{
+                text-align: start;
+                font-size: 1.2rem;
+                color: white;
+                padding: 1rem;
+                font-weight: 200;
+
+                a{
+                    margin-left: 16%;
+                }
+
+                &:hover{
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &__socials{
+        @include flex(row, center, end);
+        margin-bottom: 2.5rem;
+
+        svg {
+            margin: .5rem;
+        }
+    }
+}
+
+.inicioDesk {
+    &__col{
+        z-index: 1;
+    }
+
+    &__col2{
+        // @include flex(column, center, center);
+        // background-image: url(img/fondo.jpg);
+        // background-size: cover;
+        z-index: 0;
+        
+    }
+}
+
+.contenedorInicioWrapper{
+    height: 100vh;
+    @include flex(column, center, center);
+
+    
+}
+
+@media (min-width: 768px) {
+
+    #bodyIndex {
+        overflow: hidden;
+        background-image: url(./img/fondo.jpg);
+        background-size: cover;
+        
+    }
+    .inicioNavMobil,
+    .inicioNavMobil__dragDiv,
+    .navbarIndex{
+        display: none;
+    }
+
+    .mainAside {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40% 40% 20%;
+        background: rgba(196, 196, 196, 0.01);
+        /* VIDRIO NEON */
+
+        box-shadow: inset 0px 19.8066px 28.4403px -18.283px rgba(255, 255, 255, 0.5), inset 0px 3.55503px 5.58648px -2.03145px #FFFFFF, inset 0px -41.6447px 34.5346px -32.5032px rgba(96, 68, 145, 0.3), inset 0px 49.7704px 50.7862px -24.3774px rgba(202, 172, 255, 0.3), inset 0px 2.03145px 9.14151px rgba(154, 146, 210, 0.3), inset 0px 0.507862px 20.3145px rgba(227, 222, 255, 0.2);
+        backdrop-filter: blur(50.7862px);
+        height: 100%;
+        z-index: 1;    
+    }
+
+    .inicioDesk{
+        display: block;
+        height: 100vh ;
+    }
+    $b: 1.5em; // border-width
+    $blur: blur(9px);
+    $rect: inset(0);
+
+    .contenedorInicio{
+        @include flex(column, none, center);
+        background: rgba(243, 237, 237, 0.014);
+        box-shadow: inset 0px 19.8066px 28.4403px -18.283px rgba(255, 255, 255, 0.5), inset 0px 3.55503px 5.58648px -2.03145px #FFFFFF, inset 0px -41.6447px 34.5346px -32.5032px rgba(96, 68, 145, 0.3), inset 0px 49.7704px 50.7862px -24.3774px rgba(202, 172, 255, 0.3), inset 0px 2.03145px 9.14151px rgba(154, 146, 210, 0.3), inset 0px 0.507862px 20.3145px rgba(227, 222, 255, 0.2);
+        -webkit-backdrop-filter: blur(50.7862px);
+        border-radius: 0px 10px 10px 0px;
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-top-right-radius: 0.62rem;
+        border-bottom-right-radius: 0.62rem;
+        margin-left: -1rem; 
+        overflow: hidden;
+        padding-bottom: 2rem;
+        
+        position: relative;
+
+        
+        
+        
+
+        &__descrp{
+            @include flex(column, center, start);
+            margin-left: 8rem;
+            margin-right: 4rem;
+           
+
+            h4{
+                text-align: center;
+                color: $color-blanco;
+                
+
+                
+            }
+
+            p{
+                color: $color-blanco;
+                text-align: left;
+                font-weight: 200;
+                
+            }
+        }
+        
+        svg {
+            width: 70%;
+            max-height: 8rem;
+        }
+
+        &__turnos{
+            margin: 2rem 0 0 0;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        &__bWrapper{
+            @include flex(column,center,center);
+            margin: .7rem 0;
+
+            button{
+                margin: .6rem 0;
+                font-size: 1rem;
+            }
+
+            .button2{
+                padding: 1rem 4.7rem;
+            }
+        }
+        
+    }
+
+    
+}
+
+@media (min-height: 741px) {
+    .inicioNavMobil{
+        height: 112vh;
+    }
+}
